@@ -1,0 +1,214 @@
+.my-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: minmax(10px, 120px) 1fr;
+  width: 100vw;
+  .sidebar {
+    background-color: #001f30;
+    padding: 17px 0px;
+    height: 100%;
+    grid-row: 1 / -1;
+    &-header {
+      color: white;
+      padding: 35px 10px;
+      position: relative;
+      height: 10%;
+      &-title {
+        margin: 0;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+      }
+      &-icon {
+        background-color: #a1d1f5;
+        height: 28.5px;
+        width: 28.5px;
+        border-radius: 5px;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 10px;
+        left: 30px;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      &-items {
+        .item {
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          padding: 10px 10px;
+          color: white;
+          justify-content: space-between;
+          cursor: pointer;
+          &-selected {
+            background-color: #002d45;
+            color: #ff9d41;
+            .icon {
+              color: #ff9d41;
+            }
+          }
+          .icon {
+            margin-right: 15px;
+          }
+          div {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      &-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > * {
+          color: white;
+          line-height: 1.1;
+        }
+        &-credentials {
+          display: flex;
+          flex-direction: column;
+        }
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .header {
+    background-color: #f3f3f1;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    &-content {
+      display: flex;
+      align-items: center;
+      .input-container {
+        position: relative;
+        margin: 0 10px;
+        &.value {
+          svg {
+            display: inline;
+          }
+        }
+        input {
+          background-color: inherit;
+          border: none;
+          border-bottom: black solid 1px;
+          margin-left: 15px;
+          width: 200px;
+          outline: none;
+        }
+        input[value] {
+          color: #131313;
+          font-size: large;
+        }
+        svg {
+          display: none;
+          color: black;
+          cursor: pointer;
+          position: absolute;
+          right: -1px;
+        }
+      }
+      svg {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .content {
+    background-color: white;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    &-info {
+      margin-bottom: 10px;
+      hr {
+        margin: 5px 0;
+      }
+    }
+
+    &-table {
+      display: flex;
+      flex-direction: column;
+      &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .search-container {
+          display: flex;
+          align-items: center;
+          border: rgba(#2f2f2e, 0.8) 1px solid;
+          border-radius: 5px;
+          padding: 2px 5px;
+          .toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+          }
+          .search {
+            margin: 0 5px;
+            padding-left: 5px;
+            border-left: #2f2f2e solid 1px;
+          }
+          input {
+            border: none;
+            margin-left: 10px;
+            background-color: inherit;
+            outline: none;
+          }
+          & > * {
+            color: #2f2f2e;
+          }
+        }
+        &-right_side {
+          display: flex;
+          align-items: center;
+          .button-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f3f3f1;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            width: 130px;
+            margin-right: 15px;
+            box-shadow: 1px 1px 1px 0 rgba(black, 0.2);
+            &-left_side {
+              display: flex;
+              align-items: center;
+              svg {
+                margin-right: 5px;
+              }
+            }
+          }
+          .date-container {
+            display: flex;
+            border: 1px solid rgba(gray, 0.8);
+            align-items: center;
+            border-radius: 5px;
+            svg {
+              margin: 0 5px;
+            }
+            input {
+              border: none;
+              background-color: inherit !important;
+              outline: none;
+              height: 31px;
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+tbody {
+  tr {
+    &:hover {
+      background-color: #caecff !important;
+      cursor: pointer;
+    }
+  }
+  input {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.selected {
+  background-color: #99dbff !important;
+}

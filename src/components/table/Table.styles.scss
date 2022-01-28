@@ -1,0 +1,29 @@
+table {
+  margin-top: 50px;
+  border: 1px solid rgba(black, 0.7) !important;
+  border-radius: 5px !important;
+  thead {
+    background-color: inherit;
+    border-radius: 5px !important;
+    tr {
+      th {
+        color: black;
+        input {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

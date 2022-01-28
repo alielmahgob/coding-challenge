@@ -1,0 +1,11 @@
+.action-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 0 rgba(black, 0.2);
+  &.black {
+    color: black !important;
+  }
+}
